@@ -1,5 +1,4 @@
 import streamlit as st
-import openai
 import os
 from pages import welcome_page, setup_profile_page, chatbot_page, settings_page
 
