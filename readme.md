@@ -1,0 +1,29 @@
+# Contexte de l'entreprise : NaturaBelle
+
+- **Nom :** NaturaBelle  
+- **Secteur :** Cosmétique naturelle et bio  
+- **Produit/Service :** Gamme de soins pour la peau à base d’ingrédients 100 % naturels et biologiques, incluant des crèmes hydratantes, des sérums, et des masques.  
+- **Vision :** Devenir la référence en cosmétiques naturels respectueux de la peau et de l’environnement.  
+- **Mission :** Offrir des produits de beauté efficaces, sans produits chimiques nocifs, accessibles à toutes les femmes et hommes soucieux de leur santé et de l’écologie.  
+- **Taille de l'entreprise :** 6-10 employés  
+- **Stade de développement :** Croissance  
+- **Marché cible :**  
+  - Femmes et hommes de 25 à 50 ans sensibles aux cosmétiques naturels.  
+  - Marché français avec expansion prévue en Europe.  
+  - Distribution en ligne (site e-commerce) et via des boutiques partenaires bio.  
+- **Proposition de valeur unique :**  
+  - Formules 100 % naturelles et certifiées bio.  
+  - Produits respectueux de l’environnement avec emballages écoresponsables.  
+  - Tests dermatologiques garantissant une tolérance optimale pour les peaux sensibles.  
+- **Concurrents principaux :**  
+  - Caudalie  
+  - Weleda  
+  - La Rosée  
+- **Principaux objectifs :**  
+  - **6 mois :** Augmenter la notoriété de la marque avec une campagne marketing digitale.  
+  - **1 an :** Développer un réseau de revendeurs bio en France.  
+  - **5 ans :** Expansion à l’international avec une présence dans 5 pays européens.  
+- **Défis clés :**  
+  - Se différencier dans un marché très concurrentiel.  
+  - Maintenir une production écologique tout en restant rentable.  
+  - Sensibiliser les consommateurs aux bienfaits des cosmétiques naturels.  
