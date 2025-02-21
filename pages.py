@@ -3,14 +3,51 @@ import google.generativeai as genai
 import time
 
 def welcome_page():
-    #Explication de l'app, son fonctionnement, le fonctionnement de chaque page (aucun input ou interaction dans cette page.
+    # Explication détaillée de l'application et de son fonctionnement
     st.title("Bienvenue dans l'application PropulseAI")
-    st.write("Cette application est conçue pour vous aider à propulser votre entreprise grâce à l'IA.")
-    st.write("Elle est composée de 3 pages :")
-    st.write("- La page de présentation de l'application")
-    st.write("- La page de définition du profil de l'entreprise")
-    st.write("- La page de chatbot")
-    st.write("Vous pouvez naviguer entre les pages en cliquant sur le menu en haut de la page.")
+    
+    st.write("""
+    **PropulseAI** est une plateforme intelligente dédiée aux petites entreprises et aux entrepreneurs. Elle utilise l'intelligence artificielle pour fournir des conseils experts dans les domaines clés de l'entreprise, comme l'opérationnel, la finance, et le marketing. 
+
+    ### Fonctionnement de l'application :
+    Cette application est conçue pour vous guider tout au long du parcours de votre entreprise, en vous offrant des outils et des conseils adaptés à votre profil. Vous pourrez interagir avec des **chatbots experts** dans divers domaines pour poser vos questions et obtenir des recommandations personnalisées.
+
+    ### Composants principaux de l'application :
+    
+    1. **Page de présentation de l'application**  
+       Sur cette page, vous trouverez une introduction générale sur PropulseAI et son objectif : vous aider à faire croître votre entreprise grâce à l'IA.
+
+    2. **Page de définition du profil de l'entreprise**  
+       Ici, vous définissez votre profil d'entreprise en renseignant des informations essentielles comme la vision, la mission, la taille de votre entreprise et plus encore. Ces informations seront utilisées pour personnaliser les conseils des chatbots et rendre l'expérience plus adaptée à vos besoins.
+
+    3. **Page de chatbot**  
+       Sur cette page, vous pouvez interagir directement avec les experts virtuels dans des domaines spécifiques :
+       - **Expert Opérationnel** : Pour des conseils sur la gestion quotidienne de l'entreprise.
+       - **Expert Finance** : Pour des stratégies et des conseils financiers adaptés.
+       - **Expert Marketing et Commerciale** : Pour des recommandations sur la croissance de votre entreprise, la stratégie marketing et la vente.
+
+    Vous pouvez naviguer entre ces différentes pages en utilisant le menu situé en haut de l'écran. 
+    """)
+
+    st.write("### Comment ça marche ?")
+    st.write("""
+    - **Définissez votre profil :** Renseignez les informations sur votre entreprise dans la page dédiée. Ces informations permettront à l'IA de mieux comprendre votre situation.
+    - **Posez des questions à nos experts :** Une fois votre profil défini, vous pouvez poser des questions à nos chatbots experts. Ces derniers utiliseront votre profil pour vous fournir des réponses personnalisées.
+    - **Obtenez des conseils stratégiques :** Les conseils fournis seront adaptés à votre secteur d'activité, à vos objectifs, à la taille de votre entreprise, et bien plus encore.
+    
+    **Astuce :** Plus vous renseignez de détails dans votre profil, plus les conseils que vous recevrez seront pertinents et personnalisés.
+    """)
+
+    st.write("### Pourquoi utiliser PropulseAI ?")
+    st.write("""
+    - **Gagner du temps :** Pas besoin de chercher des informations partout, PropulseAI centralise les conseils d'experts en un seul endroit.
+    - **Conseils sur-mesure :** L'intelligence artificielle adapte ses recommandations en fonction de votre entreprise et de vos besoins spécifiques.
+    - **Accéder à des experts sans coût élevé :** Profitez de l'expertise d'AI dans les domaines essentiels pour les entrepreneurs, sans avoir à engager un consultant coûteux.
+    """)
+
+    st.write("### Prêt à commencer ?")
+    st.write("Cliquez sur les différentes pages du menu pour commencer à définir votre profil d'entreprise, poser vos questions à nos experts et bien plus encore !")
+
 
 
 def setup_profile_page():
