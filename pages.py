@@ -152,39 +152,39 @@ def setup_profile_page():
       
 def call_gemini(query, pre_prompt, chat_history, profile):
     try:
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        model = genai.GenerativeModel(st.session_state.model_selected)
         chat = model.start_chat()
         
-        # Envoyer le pré-prompt comme message système
-        if pre_prompt:
-            system_message = {
-                "role": "system",
-                "content": pre_prompt
-            }
-            chat.send_message(system_message["content"])
-        
+        chat.send_message(pre_prompt)
         # Envoyer l'historique avec les rôles appropriés
         for msg in chat_history:
             chat.send_message(msg["content"])
-        
+            print(f"msg: {msg}")
+            
         # Envoyer la nouvelle question
         response = chat.send_message(query)
-        print(chat)
         return response.text 
         
     except Exception as e:
         st.error(f"Erreur lors de l'appel à Gemini: {e}")
+        print(f"Erreur lors de l'appel à Gemini: {e}")
         return None
     
 def chatbot_page(chatbot_type):
     st.title(f"Expert {chatbot_type.capitalize()}")
+    
+    # Ajout du bouton pour effacer l'historique
+    col1, col2 = st.columns([4, 1])
+    with col2:
+        if st.button("Effacer l'historique", key=f"clear_{chatbot_type}"):
+            st.session_state[f"chat_history_{chatbot_type}"] = []
+            st.rerun()
+    
     pre_prompt = st.session_state.pre_prompts_formatted.get(chatbot_type, "")
-    st.text(pre_prompt)
     chat_history_key = f"chat_history_{chatbot_type}"
     if chat_history_key not in st.session_state:
         st.session_state[chat_history_key] = []
     chat_history = st.session_state[chat_history_key]
-
     # Afficher l'historique des messages
     for message in chat_history:
         st.chat_message(message["role"]).write(message["content"])
@@ -211,11 +211,14 @@ def chatbot_page(chatbot_type):
         
         # Utiliser write_stream pour afficher la réponse
         assistant_message.write_stream(stream_response)
+        st.rerun()
 
         
 def settings_page():
     st.title("Paramètres")
     st.write("Cette page vous permet de configurer les paramètres de l'application.")
+    
+    st.session_state.model_selected = st.selectbox("Sélectionnez le modèle", ["gemini-1.5-pro", "gemini-2.0-flash"], index=0)
     
     # Section API Key
     st.header("Configuration de l'API")

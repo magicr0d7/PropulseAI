@@ -20,6 +20,9 @@ if "pre_prompts_templates" not in st.session_state:
         "finance": finance
     }
 
+if "model_selected" not in st.session_state:
+    st.session_state.model_selected = "gemini-2.0-flash"
+
 if "pre_prompts_formatted" not in st.session_state:
     st.session_state.pre_prompts_formatted = {}
 
